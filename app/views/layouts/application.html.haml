@@ -1,0 +1,28 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Daily Secretion
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{:href => "http://fonts.googleapis.com/css?family=Press+Start+2P", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    .container
+      .row
+        .header
+          %a.logo{:href => "/"}
+            =image_tag "DS-logo.png", class: "logo"
+        #navbar
+          %ul.nav.navbar-nav
+            %li.active
+              %a{class: "nav-item", :href => "/"} Art
+            %li.active
+              %a{class: "nav-item", :href => "/zines"} Zines
+            %li.active
+              %a{class: "nav-item", :href => "/about"} About
+            %li.active
+              %a{class: "nav-item", :href => "/contact"} Contact
+      = yield

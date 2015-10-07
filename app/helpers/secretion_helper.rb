@@ -1,0 +1,2 @@
+module SecretionHelper
+end

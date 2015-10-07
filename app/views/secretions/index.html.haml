@@ -1,0 +1,14 @@
+.container
+  #links
+    - @secretions.each do |secretion|
+      %a{href: secretion.image_url, :title => secretion.title}
+        %img{alt: secretion.title, src: secretion.thumb_url }
+
+  #blueimp-gallery.blueimp-gallery
+    .slides
+    %h3.title
+    %a.prev ‹
+    %a.next ›
+    %a.close ×
+    %a.play-pause
+    %ol.indicator
