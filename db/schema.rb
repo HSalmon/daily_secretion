@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005071954) do
+ActiveRecord::Schema.define(version: 20151018041643) do
 
   create_table "secretions", force: true do |t|
     t.string   "flickr_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20151005071954) do
     t.string   "thumb_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "kind"
   end
 
 end

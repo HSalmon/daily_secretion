@@ -1,2 +1,21 @@
-.row
-  %p Coming soon!
+.content-container
+  .row
+    .col-md-4.zine-container
+      %p.zine-title= @issue_one.title
+      %img.zine-image.issue-one{src: @issue_one.image_url}
+    .col-md-4.zine-container
+      %p.zine-title= @issue_two.title
+      %img.zine-image.issue-two{src: @issue_two.image_url}
+    .col-md-4.zine-container
+      %p.zine-title= @issue_three.title
+      %img.zine-image.issue-three{src: @issue_three.image_url}
+  .row
+    .zine-container
+      %p.zine-title= @issue_four.title
+      %img.zine-image.issue-four{src: @issue_four.image_url}
+  .row.zine-order-info
+    %p Digital copies available soon!
+    %p
+      %span To order print copies of any issues of Daily Secretion, please get in touch:
+      %span
+        %a{href: "mailto:dailysecretionzine@gmail.com", class: "mailto"} dailysecretionzine@gmail.com
